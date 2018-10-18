@@ -28,8 +28,8 @@ class Solution1 {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		   동일 폴더 내의 input4.txt 로부터 데이터를 읽어옵니다.
-		   또한 동일 폴더 내의 output4.txt 로 정답을 출력합니다.
+		   동일 폴더 내의 input1.txt 로부터 데이터를 읽어옵니다.
+		   또한 동일 폴더 내의 output1.txt 로 정답을 출력합니다.
 		 */
 		BufferedReader br = new BufferedReader(new FileReader("input1.txt"));
 		StringTokenizer stk;
@@ -61,27 +61,10 @@ class Solution1 {
 			   문제의 답을 계산하여 그 값을 Answer에 저장하는 것을 가정하였습니다.
 			 */
 			/////////////////////////////////////////////////////////////////////////////////////////////
-                        int [][]B = new int[max_n][max_n];
-                        int up, left, cur;
+			Answer = 0;
 
-                        Answer = A[0][0];
-                        if(A[0][0] % 2 != 0) Answer *= -1;
 
-                        for (int i=0; i<max_n; i++){
-                          for (int j=0; j<max_n; j++){
-                            cur = A[i][j];
-                            if (cur % 2 != 0 ) cur *= -1;
-                            B[i][j] = cur;
-
-                            if(i>0 && B[i-1][j] + cur > B[i][j] ) B[i][j] = B[i-1][j] + cur;
-                            if(j>0 && B[i][j-1] + cur > B[i][j] ) B[i][j] = B[i][j-1] + cur;
-
-                            if(Answer < B[i][j]) Answer = B[i][j];
-                          }
-                        }
-			//Answer = 0;
-
-			// output4.txt로 답안을 출력합니다.
+			// output1.txt로 답안을 출력합니다.
 			pw.println("#" + test_case + " " + Answer);
 			/*
 			   아래 코드를 수행하지 않으면 여러분의 프로그램이 제한 시간 초과로 강제 종료 되었을 때,

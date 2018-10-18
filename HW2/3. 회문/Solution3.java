@@ -57,7 +57,7 @@ class Solution3 {
 			Answer = 0;
 
 
-			// output4.txt로 답안을 출력합니다.
+			// output3.txt로 답안을 출력합니다.
 			pw.println("#" + test_case + " " + Answer);
 			/*
 			   아래 코드를 수행하지 않으면 여러분의 프로그램이 제한 시간 초과로 강제 종료 되었을 때,

@@ -34,7 +34,7 @@ class Solution2 {
 	public static void main(String[] args) throws Exception {
 		/*
 		   동일 폴더 내의 input2.txt 로부터 데이터를 읽어옵니다.
-		   또한 동일 폴더 내의 output4.txt 로 정답을 출력합니다.
+		   또한 동일 폴더 내의 output2.txt 로 정답을 출력합니다.
 		 */
 		BufferedReader br = new BufferedReader(new FileReader("input2.txt"));
 		StringTokenizer stk;
@@ -65,7 +65,7 @@ class Solution2 {
 			Answer[2] = 0;  // c 의 갯수
 
 
-			// output4.txt로 답안을 출력합니다.
+			// output2.txt로 답안을 출력합니다.
 			pw.println("#" + test_case + " " + Answer[0] + " " + Answer[1] + " " + Answer[2]);
 			/*
 			   아래 코드를 수행하지 않으면 여러분의 프로그램이 제한 시간 초과로 강제 종료 되었을 때,
